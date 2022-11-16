@@ -1,0 +1,15 @@
+ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4px;
+}
+
+.card {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    border: 2px solid black;
+    width: 350px;
+    padding-left: 10px;
+}
