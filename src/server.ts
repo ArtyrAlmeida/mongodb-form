@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import router from './routes/routes';
 import mongoose from 'mongoose';
+import path from 'path';
 import * as dotenv from 'dotenv';
 dotenv.config();
 
@@ -15,6 +16,7 @@ mongoose.connect(databaseUri)
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static(path.join(__dirname, '/public')));
 app.use(
     express.urlencoded({
         extended: true,
