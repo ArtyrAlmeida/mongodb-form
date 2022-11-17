@@ -13,3 +13,27 @@ ul {
     width: 350px;
     padding-left: 10px;
 }
+
+#modal {
+    display: none;
+    border: 6px black solid;
+    border-radius: 50px;
+    background-color: white;
+    position: absolute;
+    padding: 20px;
+    height: 400px;
+    width: 300px;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#modal form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
