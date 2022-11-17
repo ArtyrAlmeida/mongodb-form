@@ -14,7 +14,16 @@ const createCard = (req: Response, res: Response) => {
         if(err) console.log(err);
     })
     
-    res.redirect('/');
+    return res.redirect('/')
 }
 
-export { sendData, createCard }
+const deleteCard = (req: Response, res: Response) => {
+    const { id } = req.params;
+    Card.deleteOne({ _id: id }, (err) => {
+        console.log(err);
+    });
+
+    res.sendStatus(204);
+}
+
+export { sendData, createCard, deleteCard }
