@@ -6,7 +6,7 @@ const sendData = async (req: Request, res: Response) => {
     res.json(list)
 }
 
-const createCard = (req: Response, res: Response) => {
+const createCard = (req: Request, res: Response) => {
     const body = { ...req.body };
 
     const card = new Card(body);
@@ -17,7 +17,7 @@ const createCard = (req: Response, res: Response) => {
     return res.redirect('/')
 }
 
-const deleteCard = (req: Response, res: Response) => {
+const deleteCard = (req: Request, res: Response) => {
     const { id } = req.params;
     Card.deleteOne({ _id: id }, (err) => {
         console.log(err);

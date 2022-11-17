@@ -33,7 +33,6 @@ function handleDeleteClick(event) {
     const url = `http://localhost:3000/deleteCard/${dataId}`
     fetch(url, { method: "DELETE" })
         .then(response => {
-            console.log('aaa');
             if (!response.ok) {
                 throw new Error("Error");
             }   
